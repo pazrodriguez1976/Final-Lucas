@@ -72,3 +72,10 @@ export function hacerPedido(clienteId,prendaId, cantidad) {
   pedidos.push(nuevoPedido);
   console.log(`Pedido realizado: ${cantidad}x ${prenda.nombre}. Total: ${nuevoPedido.total}$`);
 }
+
+export function mostrarPedidos() {
+  console.log("--- Pedidos Realizados ---");
+  pedidos.forEach((pedido, index) => {
+    console.log(`Pedido ${index + 1}: ${pedido.cantidad}x ${pedido.prenda} - Total: ${pedido.total}€`);
+  });
+}
