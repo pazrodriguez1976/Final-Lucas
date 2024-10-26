@@ -74,3 +74,12 @@ switch (opcion) {
       }
     }
   }
+
+  function listarClientes() {
+    return clientes
+      .map(cliente => `ID: ${cliente.id} - ${cliente.nombre}`)
+      .join("\n");
+  }
+  
+  // Ejecutar el menú
+  mostrarMenu();
